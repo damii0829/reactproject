@@ -1,0 +1,47 @@
+/* 전체 배경 (은은한 수채화 느낌의 그래디언트) */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    font-family: 'Pretendard', 'Segoe UI', sans-serif;
+}
+
+/* 박스 카카오 카드 스타일 */
+.welcome-card {
+    background: #ffffff;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+/* 각 인공지능/사람 인사말 항목 스타일 */
+.welcome-item {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333333;
+    padding: 12px 24px;
+    border-radius: 12px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+/* 마우스를 올렸을 때 살짝 뜨는 효과 */
+.welcome-item:hover {
+    transform: translateY(-3px);
+    background-color: #eef2ff;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+}
+
+/* 이름(김인공, 박폴리, 이정수) 부분 강조 색상 */
+.highlight {
+    color: #4f46e5;
+    font-weight: bold;
+}
