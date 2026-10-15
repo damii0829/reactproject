@@ -1,23 +1,35 @@
-import React, { useState } from "react";
+import React from "react";
 
-function Toggle(props) {
-    const [isToggleOn, setisToggleOn] = useState(true);
+class ConfirmButton extends React.Component {
+    constructor(props) {
+        super(props);
 
-    // 방법 1. 함수 안에 함수로 정의
-    function handleClick() {
-        setisToggleOn((isToggleOn) => !isToggleOn);
+        this.state = {isConfirmed: false};
+
+        this.handleConfirm = this.handleConfirm.bind(this);
     }
 
-    // 방법 2. arrow function을 사용하여 정의
-    // const handleClick = () => {
-    //     setisToggleOn((isToggleOn) => !isToggleOn);
-    // };
+    /*
+    handleConfirm() {
+        this.setState((prevState) => ({
+            isConfirmed: !prevState.isConfirmed
+        }));
+    }
+    */
 
-    return (
-        <button onClick={handleClick}>
-            {isToggleOn ? "켜짐" : "꺼짐"}
-        </button>
-    );
+    handleConfirm = () => {
+        this.setState((prevState) => ({
+            isConfirmed: !prevState.isConfirmed
+        }));
+    };
+
+    render() {
+        return (
+            <button onClick={this.handleConfirm} disabled={this.state.isConfirmed}>
+                {this.state.isConfirmed ? "확인됨" : "확인하기"}
+            </button>
+        );
+    }
 }
 
-export default Toggle;
+export default ConfirmButton;

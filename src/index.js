@@ -24,14 +24,15 @@ import ConfirmDialog from "./04/ConfirmDialog";
 // import Toggle from "./08/Toggle";
 // import MyButton from "./08/MyButton";
 // import Toggle2 from "./08/Toggle2";
-import MyButton2 from "./08/MyButton2";
+// import MyButton2 from "./08/MyButton2";
+import ConfirmButton from "./08/ConfirmButton";
 
 const root = ReactDOM.createRoot(document.
 getElementById('root'));
 setInterval(()=> {
         root.render(
             <React.StrictMode>
-                <MyButton2/>
+                <ConfirmButton/>
             </React.StrictMode>
         );
     }, 1000
