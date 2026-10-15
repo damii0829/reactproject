@@ -22,15 +22,16 @@ import ConfirmDialog from "./04/ConfirmDialog";
 // import TextInputWithFocusButton from "./07/02/TextInputWithFocusButton";
 // import Accommodate from "./07/02/Accommodate";
 // import Toggle from "./08/Toggle";
-import MyButton from "./08/MyButton";
-import Toggle2 from "./08/Toggle2";
+// import MyButton from "./08/MyButton";
+// import Toggle2 from "./08/Toggle2";
+import MyButton2 from "./08/MyButton2";
 
 const root = ReactDOM.createRoot(document.
 getElementById('root'));
 setInterval(()=> {
         root.render(
             <React.StrictMode>
-                <Toggle2/>
+                <MyButton2/>
             </React.StrictMode>
         );
     }, 1000
