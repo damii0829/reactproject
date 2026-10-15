@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import useCounter from "./useCounter";
 import "./Accommodate.css";

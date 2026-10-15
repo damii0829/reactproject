@@ -20,12 +20,17 @@ import ConfirmDialog from "./04/ConfirmDialog";
 // import NotificationList from "./06/test/NotificationList";
 // import UseEffect from "./07/01/UseEffect";
 // import TextInputWithFocusButton from "./07/02/TextInputWithFocusButton";
-import Accommodate from "./07/02/Accommodate";
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// import Accommodate from "./07/02/Accommodate";
+// import Toggle from "./08/Toggle";
+import MyButton from "./08/MyButton";
+import Toggle2 from "./08/Toggle2";
+
+const root = ReactDOM.createRoot(document.
+getElementById('root'));
 setInterval(()=> {
         root.render(
             <React.StrictMode>
-                <Accommodate/>
+                <Toggle2/>
             </React.StrictMode>
         );
     }, 1000

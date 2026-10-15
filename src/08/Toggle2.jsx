@@ -1,0 +1,23 @@
+import React, { useState } from "react";
+
+function Toggle(props) {
+    const [isToggleOn, setisToggleOn] = useState(true);
+
+    // 방법 1. 함수 안에 함수로 정의
+    function handleClick() {
+        setisToggleOn((isToggleOn) => !isToggleOn);
+    }
+
+    // 방법 2. arrow function을 사용하여 정의
+    // const handleClick = () => {
+    //     setisToggleOn((isToggleOn) => !isToggleOn);
+    // };
+
+    return (
+        <button onClick={handleClick}>
+            {isToggleOn ? "켜짐" : "꺼짐"}
+        </button>
+    );
+}
+
+export default Toggle;
