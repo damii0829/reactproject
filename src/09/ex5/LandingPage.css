@@ -1,0 +1,96 @@
+.landing-page {
+    width: min(640px, 92%);
+    margin: 60px auto;
+    overflow: hidden;
+    background-color: #fffafb;
+    border: 1px solid #ead3da;
+    border-radius: 20px;
+    box-shadow: 0 12px 32px rgba(128, 0, 32, 0.12);
+    font-family: "맑은 고딕", sans-serif;
+}
+
+/* 상단 툴바 */
+.landing-page .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 24px;
+    background-color: #f5e6eb;
+    border-bottom: 1px solid #ead3da;
+}
+
+.landing-page .welcome-text {
+    color: #800020;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* 로그인·로그아웃 버튼 */
+.landing-page .auth-btn {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 10px;
+    background-color: #800020;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.landing-page .auth-btn:hover {
+    background-color: #5c0017;
+    transform: translateY(-2px);
+}
+
+.landing-page .auth-btn:active {
+    transform: translateY(0);
+}
+
+.landing-page .auth-btn:focus-visible {
+    outline: 3px solid #c77991;
+    outline-offset: 3px;
+}
+
+/* 본문 */
+.landing-content {
+    padding: 36px 24px;
+    text-align: center;
+}
+
+.landing-content p {
+    margin: 0 0 24px;
+    color: #682137;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.landing-image {
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(128, 0, 32, 0.15);
+}
+
+@media (max-width: 480px) {
+    .landing-page {
+        margin: 24px auto;
+    }
+
+    .landing-page .toolbar {
+        padding: 16px;
+    }
+
+    .landing-content {
+        padding: 28px 16px;
+    }
+
+    .landing-content p {
+        font-size: 16px;
+    }
+}

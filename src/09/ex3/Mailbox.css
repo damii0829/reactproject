@@ -1,0 +1,74 @@
+/* 전체 배경 및 배치 */
+.example-container {
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
+    background: #fffbea;
+    font-family: "Malgun Gothic", sans-serif;
+}
+
+/* 공통 카드 */
+.counter-card,
+.mailbox-card {
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
+    padding: 32px 24px;
+    text-align: center;
+    background: #ffffff;
+    border: 2px solid #ffe69a;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(150, 115, 20, 0.12);
+    color: #70551b;
+}
+
+/* 카운터 */
+.counter-card {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.counter-card h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* 메일함 인사 */
+.mailbox-card h1 {
+    margin: 0 0 20px;
+    font-size: 28px;
+    color: #805f13;
+}
+
+/* 메시지 안내 */
+.mailbox-card h2 {
+    margin: 0;
+    padding: 18px;
+    border-radius: 14px;
+    background: #fff4c2;
+    color: #715819;
+    font-size: 18px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+body {
+    margin: 0;
+}
+
+#root {
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
+    background: #fffbea;
+}
