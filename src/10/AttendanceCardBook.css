@@ -1,0 +1,226 @@
+.attendance-book,
+.attendance-book * {
+    box-sizing: border-box;
+}
+
+.attendance-book {
+    max-width: 1440px;
+    margin: 40px auto;
+    padding: 32px;
+    border: 1px solid #e8ebef;
+    border-radius: 20px;
+    background: #fafbfc;
+    font-family: "Noto Sans KR", "맑은 고딕", sans-serif;
+}
+
+.attendance-book h2 {
+    margin: 0 0 24px;
+    color: #202938;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+}
+
+.student-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 4px 2px 16px;
+    scrollbar-width: thin;
+    scrollbar-color: #cdd3dc transparent;
+}
+
+.student-card {
+    flex: 1 0 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 16px;
+    border: 1px solid #e8ebef;
+    border-radius: 14px;
+    background: #fff;
+    text-align: center;
+    transition: border-color 0.2s ease;
+}
+
+.student-avatar {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    background: #f1f3f5;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+.student-info {
+    width: 100%;
+    min-width: 0;
+}
+
+.student-info h3 {
+    margin: 0 0 8px;
+    color: #263141;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    overflow-wrap: anywhere;
+}
+
+.student-info p {
+    margin: 0;
+    color: #727d8c;
+    font-size: 12px;
+    line-height: 1.7;
+    word-break: keep-all;
+}
+
+.student-grid::-webkit-scrollbar {
+    height: 6px;
+}
+
+.student-grid::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #cdd3dc;
+}
+
+.student-grid::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+@media (hover: hover) {
+    .student-card:hover {
+        border-color: #aab8cb;
+    }
+}
+
+@media (max-width: 600px) {
+    .attendance-book {
+        margin: 16px 12px;
+        padding: 22px 16px;
+    }
+
+    .attendance-book h2 {
+        font-size: 21px;
+    }
+
+    .student-card {
+        flex: 0 0 180px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .student-card {
+        transition: none;
+    }
+}
+.attendance-book .student-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow: visible;
+    padding: 0;
+}
+
+.attendance-book .student-card {
+    flex: none;
+    width: 100%;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px 24px;
+    text-align: left;
+}
+
+.attendance-book .student-avatar {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 0;
+}
+
+.attendance-book .student-info {
+    flex: 1;
+}
+
+.attendance-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e8ebef;
+}
+
+.attendance-label {
+    display: block;
+    margin-bottom: 10px;
+    color: #637b9c;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.attendance-header h2 {
+    margin: 0 0 10px;
+    color: #202938;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.attendance-description {
+    margin: 0;
+    color: #7b8593;
+    font-size: 13px;
+    line-height: 1.7;
+    word-break: keep-all;
+}
+
+.student-count {
+    flex-shrink: 0;
+    min-width: 110px;
+    padding: 16px 22px;
+    border: 1px solid #e8ebef;
+    border-radius: 14px;
+    background: #fff;
+}
+
+.student-count > span {
+    display: block;
+    margin-bottom: 6px;
+    color: #7b8593;
+    font-size: 12px;
+}
+
+.student-count strong {
+    color: #263141;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.student-count small {
+    margin-left: 5px;
+    color: #7b8593;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+@media (max-width: 480px) {
+    .attendance-header {
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .attendance-header h2 {
+        font-size: 23px;
+    }
+
+    .student-count {
+        min-width: 80px;
+        padding: 14px;
+    }
+}
