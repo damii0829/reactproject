@@ -1,0 +1,137 @@
+.distance-page {
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 32px 20px;
+    font-family: "Inter", system-ui, sans-serif;
+    color: #30243c;
+    background:
+            radial-gradient(ellipse at 12% 10%, #ffd9ce 0%, transparent 45%),
+            radial-gradient(ellipse at 90% 85%, #e5d9ff 0%, transparent 48%),
+            #fff8f2;
+}
+
+.distance-card {
+    box-sizing: border-box;
+    width: min(100%, 760px);
+    padding: clamp(22px, 5vw, 44px);
+    border: 1px solid #fff;
+    border-radius: 28px;
+    background: #fff;
+    box-shadow: 0 20px 55px rgba(88, 49, 106, 0.12);
+}
+
+.distance-header {
+    margin-bottom: 30px;
+}
+
+.distance-header h1 {
+    margin: 0 0 10px;
+    font-size: clamp(26px, 5vw, 42px);
+    letter-spacing: -0.05em;
+}
+
+.distance-header p {
+    margin: 0;
+    color: #685b72;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.distance-fields {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 42px minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+}
+
+.distance-fields > div {
+    min-width: 0;
+    padding: 18px;
+    border: 1px solid #f4c9bd;
+    border-radius: 18px;
+    background: #fff0e9;
+    color: #843e31;
+}
+
+.distance-fields > div:last-child {
+    border-color: #dfcff7;
+    background: #f4edff;
+    color: #594080;
+}
+
+.distance-fields label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.distance-fields input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border: 1px solid #d9cbdc;
+    border-radius: 12px;
+    background: #fff;
+    color: #30243c;
+    font: inherit;
+    font-size: 22px;
+    font-variant-numeric: tabular-nums;
+}
+
+.distance-fields input::placeholder {
+    color: #72667a;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.distance-fields input:focus {
+    outline: 2px solid #8254bc;
+    outline-offset: 2px;
+}
+
+.distance-swap {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #f1e8ff;
+    color: #633c94;
+    font-size: 24px;
+}
+
+.distance-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 12px;
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid #eee6f2;
+    color: #685b72;
+    font-size: 14px;
+}
+
+.distance-footer strong {
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: #f4edff;
+    color: #594080;
+}
+
+@media (max-width: 560px) {
+    .distance-fields {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .distance-swap {
+        justify-self: center;
+        width: 36px;
+        height: 36px;
+        transform: rotate(90deg);
+    }
+}

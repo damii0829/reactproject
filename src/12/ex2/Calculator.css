@@ -1,0 +1,64 @@
+.boiling-calculator {
+    position: relative;
+    box-sizing: border-box;
+    width: calc(100% - 32px);
+    max-width: 420px;
+    min-width: 0;
+    margin: 40px auto;
+    padding: 24px;
+    border: 2px solid #f5a9c5;
+    border-radius: 28px;
+    background:
+            radial-gradient(circle at 93% 20%, #fff 0 5px, transparent 6px),
+            radial-gradient(circle at 87% 29%, #fff 0 3px, transparent 4px),
+            linear-gradient(150deg, #fff7fb, #ffe0ee);
+    box-shadow: 0 8px 0 #f8c7da, 0 14px 24px #a83c6320;
+}
+
+.boiling-calculator legend {
+    padding: 6px 12px;
+    border: 1px solid #f5a9c5;
+    border-radius: 999px;
+    background: #fff;
+    color: #9b315d;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.boiling-calculator legend::before {
+    content: "💧";
+    margin-right: 6px;
+}
+
+.boiling-calculator input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 13px 16px;
+    border: 2px solid #f5a9c5;
+    border-radius: 16px;
+    background: #fff;
+    color: #68233f;
+    font-size: 16px;
+    text-align: center;
+}
+
+.boiling-calculator input:focus {
+    outline: 2px solid #b84072;
+    outline-offset: 3px;
+}
+
+.boiling-calculator p {
+    margin: 16px 0 0;
+    padding: 12px 16px;
+    border: 2px dashed #ef9dbd;
+    border-radius: 16px;
+    background: #fff5fa;
+    color: #8e2e56;
+    text-align: center;
+    font-weight: 700;
+}
+
+.boiling-calculator p::before {
+    content: "🫧";
+    margin-right: 6px;
+}

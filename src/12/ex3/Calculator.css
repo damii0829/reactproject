@@ -1,0 +1,42 @@
+.temperature-calculator {
+    width: min(420px, calc(100% - 32px));
+    margin: 48px auto;
+    padding: 24px;
+    box-sizing: border-box;
+    display: grid;
+    gap: 16px;
+    background: #fff1f6;
+    border: 2px solid #f5b9d0;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px #a83f681a;
+}
+
+.temperature-calculator fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 14px;
+    background: #fff;
+    border: 2px solid #f5b9d0;
+    border-radius: 16px;
+}
+
+.temperature-calculator legend {
+    padding: 0 8px;
+    color: #9e315d;
+    font-weight: 700;
+}
+
+.temperature-calculator input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid #e5a7bf;
+    border-radius: 10px;
+    background: #fff8fb;
+    font: inherit;
+}
+
+.temperature-calculator input:focus {
+    outline: 2px solid #b74472;
+    outline-offset: 2px;
+}

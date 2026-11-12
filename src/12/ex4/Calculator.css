@@ -1,0 +1,110 @@
+.temperature-calculator {
+    box-sizing: border-box;
+    width: min(440px, calc(100% - 32px));
+    margin: 48px auto;
+    padding: clamp(18px, 5vw, 28px);
+    display: grid;
+    gap: 18px;
+
+    background:
+            radial-gradient(ellipse at top left, #ffe1ed, transparent 65%),
+            linear-gradient(145deg, #fff8fc, #f3ecff);
+    border: 1px solid #edc5db;
+    border-radius: 28px;
+    box-shadow: 0 16px 40px #78445e22;
+}
+
+.temperature-calculator fieldset {
+    --accent: #a22d58;
+    --line: #e8a8c1;
+    --tint: #ffedf4;
+    --unit: "°C";
+
+    position: relative;
+    min-width: 0;
+    margin: 0;
+    padding: 12px;
+    background: #ffffffde;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+}
+
+.temperature-calculator fieldset:nth-of-type(2) {
+    --accent: #62419b;
+    --line: #cbb7ee;
+    --tint: #f3ebff;
+    --unit: "°F";
+}
+
+.temperature-calculator legend {
+    padding: 0 8px;
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.temperature-calculator fieldset::after {
+    content: var(--unit);
+    position: absolute;
+    right: 22px;
+    bottom: 22px;
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 30px;
+    border-radius: 9px;
+    background: var(--tint);
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 800;
+    pointer-events: none;
+}
+
+.temperature-calculator input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    padding: 0 56px 0 14px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    color: #372539;
+    font: inherit;
+    font-size: 21px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.temperature-calculator input:focus {
+    border-color: var(--accent);
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.temperature-calculator > p {
+    margin: 0;
+    padding: 14px 16px;
+    background: #fff;
+    border: 1px solid #edc5db;
+    border-radius: 16px;
+    color: #73374f;
+    text-align: center;
+    font-weight: 700;
+}
+
+.temperature-calculator > p.is-hot {
+    background: #ffe4dc;
+    border-color: #efb4a3;
+    color: #8d3226;
+}
+
+.temperature-calculator > p.is-cool {
+    background: #e8f4ff;
+    border-color: #b5d6ef;
+    color: #285573;
+}
+
+.temperature-calculator > p.is-empty {
+    background: #fff8fc;
+    color: #73374f;
+}

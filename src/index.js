@@ -38,13 +38,17 @@ import './index.css';
 // import AttendanceBook from "./10/AttendanceBook";
 // import AttendanceCardBook from "./10/AttendanceCardBook";
 // import FruitSelect from "./11/FruitSelect";
-import Reservation from "./11/Reservation";
+// import Reservation from "./11/Reservation";
+// import Calculator from "./12/ex2/Calculator";
+// import Calculator from "./12/ex3/Calculator";
+// import Calculator from "./12/ex4/Calculator";
+import DistanceConverter from "./12/ex5/DistanceConverter";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
     <React.StrictMode>
-        <Reservation/>
+        <DistanceConverter/>
     </React.StrictMode>
 );
 
