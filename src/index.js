@@ -42,13 +42,15 @@ import './index.css';
 // import Calculator from "./12/ex2/Calculator";
 // import Calculator from "./12/ex3/Calculator";
 // import Calculator from "./12/ex4/Calculator";
-import DistanceConverter from "./12/ex5/DistanceConverter";
+// import DistanceConverter from "./12/ex5/DistanceConverter";
+// import WelcomeDialog from "./13/ex2/WelcomeDialog";
+import SingleUpDialog from "./13/ex2/SingleUpDialog";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
     <React.StrictMode>
-        <DistanceConverter/>
+        <SingleUpDialog/>
     </React.StrictMode>
 );
 

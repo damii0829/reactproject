@@ -1,0 +1,44 @@
+.FancyBorder {
+    box-sizing: border-box;
+    width: calc(100% - 32px);
+    max-width: 560px;
+    margin: 20px auto;
+    padding: clamp(24px, 5vw, 36px);
+    border: 1px solid #e8e5dc;
+    border-radius: 20px;
+    background: #ffffff;
+    text-align: left;
+}
+
+.FancyBorder-yellow {
+    border-color: #f1dfa3;
+    background: linear-gradient(135deg, #fff9e7 0%, #fffdf7 65%, #ffffff 100%);
+    box-shadow: 0 8px 24px rgba(112, 83, 24, 0.08);
+}
+
+.FancyBorder-yellow::before {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 4px;
+    margin-bottom: 18px;
+    border-radius: 999px;
+    background-color: #e8b536;
+}
+
+.FancyBorder .Dialog-title {
+    margin: 0 0 8px;
+    color: #35280f;
+    font-size: clamp(24px, 4vw, 30px);
+    font-weight: 750;
+    letter-spacing: -0.04em;
+}
+
+.FancyBorder .Dialog-message {
+    margin: 0;
+    color: #5e5138;
+    font-size: 16px;
+    line-height: 1.7;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+}
