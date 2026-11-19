@@ -1,0 +1,106 @@
+.stay-list {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 26px 20px 32px;
+    border-radius: 24px;
+    background: linear-gradient(125deg, #edf5ed, #faf4ed 55%, #f4eff8);
+    color: #282522;
+    text-align: left;
+}
+
+.stay-list h2 {
+    margin: 0 0 16px;
+    font-size: 23px;
+}
+
+.stay-list .stay-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 18px 12px;
+}
+
+.stay-list .stay-card {
+    position: relative;
+    min-width: 0;
+    padding: 5px 5px 12px;
+    border: 1px solid #fff;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(70, 54, 38, 0.10);
+}
+
+.stay-list .stay-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+    background: #e9f0e7;
+}
+
+.stay-list .stay-card::before {
+    content: "추천";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: #fff;
+    color: #383431;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.stay-list .stay-card::after {
+    content: "♡" / "";
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    color: #fff;
+    font-size: 22px;
+    line-height: 1;
+    text-shadow: 0 1px 4px #57493f;
+    pointer-events: none;
+}
+
+.stay-list .stay-card h3 {
+    margin: 10px 4px 4px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.stay-list .stay-card p {
+    margin: 0 4px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.stay-list .stay-card .stay-dates {
+    color: #6f6962;
+}
+
+.stay-list .stay-card .stay-price {
+    margin-top: 5px;
+    color: #984c30;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+@media (width < 1200px) {
+    .stay-list .stay-grid {
+        grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+    }
+}
+
+@media (width <= 480px) {
+    .stay-list {
+        padding: 20px 12px;
+    }
+
+    .stay-list .stay-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px 10px;
+    }
+}

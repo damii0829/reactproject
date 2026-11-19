@@ -1,0 +1,85 @@
+.dialog {
+    box-sizing: border-box;
+    width: min(100%, 420px);
+    margin: 24px auto;
+    padding: 28px 24px;
+    border: 1px solid #e5a687;
+    border-radius: 24px;
+    background: linear-gradient(150deg, #fff7ed, #ffd7c2);
+    box-shadow: 0 14px 30px rgba(116, 45, 23, 0.18);
+    text-align: center;
+    color: #56261c;
+}
+
+/* 화성 표면과 크레이터 */
+.dialog::before {
+    content: "";
+    display: block;
+    width: 82px;
+    height: 82px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background:
+            radial-gradient(ellipse 12px 8px at 32% 33%, #a83c2b 90%, transparent),
+            radial-gradient(ellipse 15px 10px at 65% 59%, #a43d2a 90%, transparent),
+            radial-gradient(ellipse 7px 5px at 38% 72%, #b1442c 90%, transparent),
+            radial-gradient(circle at 30% 22%, #ffc080, #e16b40 54%, #8e2d22);
+    box-shadow: inset -7px -9px 13px rgba(96, 25, 14, 0.26),
+    0 7px 20px rgba(191, 75, 39, 0.28);
+}
+
+.dialog .Dialog-title {
+    margin: 0 0 8px;
+    font-size: clamp(23px, 5vw, 30px);
+    line-height: 1.25;
+    color: #762e20;
+}
+
+.dialog .Dialog-message {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #734435;
+}
+
+.dialog input,
+.dialog button {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 11px 14px;
+    border-radius: 12px;
+    font: inherit;
+}
+
+.dialog input {
+    margin-top: 20px;
+    border: 1px solid #c48369;
+    background: #fffaf6;
+    color: #56261c;
+}
+
+.dialog input::placeholder {
+    color: #83594b;
+}
+
+.dialog button {
+    margin-top: 12px;
+    border: 0;
+    background: linear-gradient(135deg, #a83d24, #822a20);
+    box-shadow: 0 4px 10px rgba(130, 42, 32, 0.2);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.dialog button:hover {
+    background: #70241b;
+}
+
+.dialog input:focus-visible,
+.dialog button:focus-visible {
+    outline: 2px solid #862f20;
+    outline-offset: 3px;
+}

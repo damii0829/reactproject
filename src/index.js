@@ -44,13 +44,16 @@ import './index.css';
 // import Calculator from "./12/ex4/Calculator";
 // import DistanceConverter from "./12/ex5/DistanceConverter";
 // import WelcomeDialog from "./13/ex2/WelcomeDialog";
-import SingleUpDialog from "./13/ex2/SingleUpDialog";
+// import SingleUpDialog from "./13/ex2/SingleUpDialog";
+// import ProfileCard from "./13/ex3/ProfileCard";
+// import AttendanceBook from "./13/ex4/AttendanceBook";
+import MapTest from "./13/ex4/MapTest";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
     <React.StrictMode>
-        <SingleUpDialog/>
+        <MapTest/>
     </React.StrictMode>
 );
 
