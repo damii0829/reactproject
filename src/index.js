@@ -47,13 +47,14 @@ import './index.css';
 // import SingleUpDialog from "./13/ex2/SingleUpDialog";
 // import ProfileCard from "./13/ex3/ProfileCard";
 // import AttendanceBook from "./13/ex4/AttendanceBook";
-import MapTest from "./13/ex4/MapTest";
+// import MapTest from "./13/ex4/MapTest";
+import DarkOrLight from "./14/DarkOrLight";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
     <React.StrictMode>
-        <MapTest/>
+        <DarkOrLight/>
     </React.StrictMode>
 );
 
