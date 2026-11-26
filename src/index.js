@@ -48,13 +48,14 @@ import './index.css';
 // import ProfileCard from "./13/ex3/ProfileCard";
 // import AttendanceBook from "./13/ex4/AttendanceBook";
 // import MapTest from "./13/ex4/MapTest";
-import DarkOrLight from "./14/ex2/DarkOrLight";
+// import DarkOrLight from "./14/ex2/DarkOrLight";
+import HiddenKey from "./FinalExam/HiddenKey";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
     <React.StrictMode>
-        <DarkOrLight/>
+        <HiddenKey/>
     </React.StrictMode>
 );
 
