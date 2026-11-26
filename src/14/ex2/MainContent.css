@@ -1,0 +1,238 @@
+body {
+    margin: 0;
+}
+
+.product-page {
+    --background: #ffffff;
+    --surface: #ffffff;
+    --text: #171717;
+    --muted: #5f655f;
+    --line: #dedfe0;
+    --photo: #f2f3f0;
+    --accent: #235b45;
+    --accent-soft: #edf4ef;
+    --gold: #bf9b64;
+    --shadow: 0 5px 18px rgb(24 34 28 / 7%);
+    --hover-shadow: 0 12px 26px rgb(24 34 28 / 13%);
+
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--text);
+    font-family: "Pretendard", "Noto Sans KR", system-ui, sans-serif;
+}
+
+.product-dark {
+    color-scheme: dark;
+    --background: #151716;
+    --surface: #202421;
+    --text: #f5f6f4;
+    --muted: #bec7c0;
+    --line: #454d47;
+    --photo: #282d29;
+    --accent: #b5e0c7;
+    --accent-soft: #2b3a30;
+    --gold: #d6bc8d;
+    --shadow: 0 5px 18px rgb(0 0 0 / 18%);
+    --hover-shadow: 0 12px 26px rgb(0 0 0 / 30%);
+}
+
+.product-page * {
+    box-sizing: border-box;
+}
+
+.product-container {
+    width: min(1100px, calc(100% - 36px));
+    margin-inline: auto;
+}
+
+/* 중앙 로고와 테마 버튼 */
+.product-header {
+    border-bottom: 1px solid var(--line);
+    background: var(--surface);
+}
+
+.product-header-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    min-height: 68px;
+}
+
+.product-logo {
+    grid-column: 2;
+    margin: 0;
+    padding-left: 0.16em;
+    color: var(--accent);
+    font-family: Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-align: center;
+}
+
+.product-logo::after {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 4px auto 0;
+    border-radius: 2px;
+    background: var(--gold);
+    content: "";
+}
+
+.product-theme-button {
+    grid-column: 3;
+    justify-self: end;
+    padding: 8px 12px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    font-size: 0.82rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.product-theme-button:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+}
+
+/* 상품 카드 */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    padding-block: 22px 32px;
+}
+
+.product-card {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+@media (hover: hover) {
+    .product-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--hover-shadow);
+    }
+}
+
+.product-photo {
+    position: relative;
+    display: grid;
+    height: clamp(145px, 24vh, 220px);
+    place-items: center;
+    overflow: hidden;
+    border-bottom: 1px solid var(--line);
+    background: var(--photo);
+}
+
+.product-photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-photo span {
+    padding: 12px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+/* 브랜드, 상품명, 가격, 색상 */
+.product-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 12px 14px 14px;
+}
+
+.product-brand {
+    margin: 0 0 4px;
+    color: var(--muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.product-info h2 {
+    margin: 0 0 9px;
+    color: var(--text);
+    font-size: 0.96rem;
+    font-weight: 650;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.product-price {
+    margin: auto 0 9px;
+    color: var(--accent);
+    font-size: 1.16rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+}
+
+.product-color {
+    width: 100%;
+    max-width: 172px;
+    min-height: 34px;
+    padding: 5px 8px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    font-size: 0.82rem;
+    cursor: pointer;
+}
+
+.product-page :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+@media (max-width: 650px) {
+    .product-container {
+        width: calc(100% - 24px);
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding-top: 16px;
+    }
+
+    .product-info {
+        padding: 10px;
+    }
+
+    .product-logo {
+        font-size: 1.55rem;
+    }
+
+    .product-theme-button {
+        padding-inline: 8px;
+        font-size: 0.75rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .product-card {
+        transition: none;
+    }
+
+    .product-card:hover {
+        transform: none;
+    }
+}

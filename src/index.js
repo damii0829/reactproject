@@ -48,7 +48,7 @@ import './index.css';
 // import ProfileCard from "./13/ex3/ProfileCard";
 // import AttendanceBook from "./13/ex4/AttendanceBook";
 // import MapTest from "./13/ex4/MapTest";
-import DarkOrLight from "./14/DarkOrLight";
+import DarkOrLight from "./14/ex2/DarkOrLight";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
